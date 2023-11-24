@@ -102,6 +102,3 @@ export const aqiText = {
         message: "Healthy warnings of emergency conditions. The entire population is more likely to be affected."
     },
 }
-
-
-

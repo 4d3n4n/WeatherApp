@@ -42,7 +42,11 @@ const searchTimeoutDuration = 500;
 
 searchField.addEventListener("input", function() {
 
-    searchTimeout ?? clearTimeout(searchTimeout);
+    // searchTimeout ?? clearTimeout(searchTimeout);
+    if (searchTimeout !== null) {
+        clearTimeout(searchTimeout);
+    }
+
 
     if (searchField.value.trim() === '') {
         // Gérer le cas où le champ de recherche est vide
@@ -289,7 +293,7 @@ export const updateWeather = function (lat, lon) {
 
         /**
          * 24H forecast section
-         */
+         */        
 
         fetchData(url.forecast(lat,lon), function (forecast) {
             
@@ -308,6 +312,7 @@ export const updateWeather = function (lat, lon) {
                     <ul class="slider-list" data-wind></ul>
                 </div>
             `;
+
 
             for (const [index, data] of forecastList.entries()) {
 
@@ -328,7 +333,7 @@ export const updateWeather = function (lat, lon) {
                     <div class="card card-sm slider-card">
                         <p class="body-3">${module.getHours(dateTimeUnix, timezone)}</p>
                         <img src="./assets/images/weather_icons/${icon}.png" width="48" height="48" loading="lazy" alt="${description}" class="weather-icon" title="${description}">
-                        <p class="body-3">${pasreInt(temp)}°</p>
+                        <p class="body-3">${parseInt(temp)}°</p>
                     </div>
                 `;
                 hourlySection.querySelector("[data-temp]").appendChild(tempLi);

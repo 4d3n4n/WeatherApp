@@ -15,10 +15,17 @@ const currentLocation = function() {
 }
 
 
+
 /**
  * @param {string} query Searched query
  */
 const searchedLocation = query => updateWeather(...query.split("&"));
+// const searchedLocation = query => {
+//     if (query.includes("&")) {
+//         const [lat, lon] = query.split("&");
+//         updateWeather(lat, lon);
+//     }
+// }
 // updateWeather("lat=51.5073219", "lon=-0.1276474")
 
 const routes = new Map([
