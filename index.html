@@ -10,7 +10,7 @@
     <meta name="description" content="weatherio is a weather app made by codewithsadee"></meta>
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="./favicon.png" type="image/png">
 
     <!-- GOOGLE FONT LINK -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,16 +33,14 @@
     <header class="header">
         <div class="container">
             <a href="" class="logo">
-                <img src="./assets/images/logo.png" width="364" height="58" alt="logo">
+                <img src="./assets/images/logo.png" class="logo-img" alt="logo">
             </a>
 
             <div class="search-view" data-search-view>
                 <div class="search-wrapper">
-                    <input type="search" name="search" placeholder="Search city..."
-                    autocomplete="off" class="search-field" data-search-field>
+                    <input type="search" name="search" placeholder="Search city..." autocomplete="off" class="search-field" data-search-field>
                     <span class="m-icon loading-icon">search</span>
-                    <button class="icon-btn loading-icon has-state"
-                    aria-label="close search" data-search-toggler>
+                    <button class="icon-btn loading-icon has-state" aria-label="close search" data-search-toggler>
                         <span class="m-icon">arrow_back</span>
                     </button>
                 </div>
@@ -89,10 +87,14 @@
                 <!--FOOTER-->
                 <footer class="footer">
                     <p class="body-3">
-                        © 2023 <a href="https://adenan.xyz" title="portfolio" target="_blank">Adenan K.</a>
+                        © 2023<a href="https://adenan.xyz" title="portfolio" target="_blank">Adenan K.</a>
                     </p>
 
-                    <p class="body-3">
+                    <a href="https://adenan.xyz" target="_blank">
+                        <img src="./assets/images/logo-adenan.png" width="70" height="30" loading="lazy">
+                    </a>
+
+                    <p class="body-3 openweathermap">
                         Powered by <a href="https://openweathermap.org/api" title="Free OpenWeather Api" target="_blank" rel="noopener">
                             <img src="./assets/images/openweather.png" width="150" height="30" loading="lazy" alt="OpenWeather">
                         </a>

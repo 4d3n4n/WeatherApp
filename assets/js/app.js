@@ -77,7 +77,7 @@ searchField.addEventListener("input", function() {
                             <p class="item-title">${name}</p>
                             <p class="label-2 item-subtitle">${state || ""} ${country}</p>
                         </div>
-                        <a href="#weather?lat=${lat}&lon=${lon}" class="item-link has-state" aria-label="${name} weather" data-search-toggler></a>
+                        <a href="#/weather?lat=${lat}&lon=${lon}" class="item-link has-state" aria-label="${name} weather" data-search-toggler></a>
                     `;
 
                     searchResult.querySelector("[data-search-list]").appendChild(searchItem);
@@ -150,12 +150,77 @@ export const updateWeather = function (lat, lon) {
 
         const card = document.createElement("div");
         card.classList.add("card" , "card-lg", "current-weather-card");
+        
 
+
+        const body = document.querySelector("body");
+        if (icon === "01d") {
+            body.style.backgroundImage = "url('./assets/images/bg/01d.jpg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "01n") {
+            body.style.backgroundImage = "url('./assets/images/bg/01n.jpg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "02d") {
+            body.style.backgroundImage = "url('./assets/images/bg/02d.jpg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "02n") {
+            body.style.backgroundImage = "url('./assets/images/bg/02n.jpg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "03d") {
+            body.style.backgroundImage = "url('./assets/images/bg/03d.jpg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "03n") {
+            body.style.backgroundImage = "url('./assets/images/bg/03n.jpg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "04d") {
+            body.style.backgroundImage = "url('./assets/images/bg/04d.jpeg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "04n") {
+            body.style.backgroundImage = "url('./assets/images/bg/04n.jpeg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "09d") {
+            body.style.backgroundImage = "url('./assets/images/bg/09d.jpg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "09n") {
+            body.style.backgroundImage = "url('./assets/images/bg/09n.jpg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "10d") {
+            body.style.backgroundImage = "url('./assets/images/bg/10d.jpg')";
+            body.style.backgroundSize = "cover";
+            body.style.backgroundPosition = "top";
+        } else if (icon === "10n") {
+            body.style.backgroundImage = "url('./assets/images/bg/10n.jpg')";
+            body.style.backgroundSize = "cover";
+            body.style.backgroundPosition = "center";
+        } else if (icon === "11d") {
+            body.style.backgroundImage = "url('./assets/images/bg/11d.jpg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "11n") {
+            body.style.backgroundImage = "url('./assets/images/bg/11n.jpg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "13d") {
+            body.style.backgroundImage = "url('./assets/images/bg/13d.jpg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "13n") {
+            body.style.backgroundImage = "url('./assets/images/bg/13n.jpg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "50d") {
+            body.style.backgroundImage = "url('./assets/images/bg/50d.jpg')";
+            body.style.backgroundSize = "cover";
+        } else if (icon === "50n") {
+            body.style.backgroundImage = "url('./assets/images/bg/50n.jpg')";
+            body.style.backgroundSize = "cover";
+        }
+
+        console.log(icon);
+
+
+        
         card.innerHTML = `
-            <h2 class="title_2 card-title">Now</h2>
+            <h2 class="title-2 card-title">Now</h2>
             <div class="wrapper">
                 <p class="heading">${parseInt(temp)}°<sup>c</sup></p>
-                <img src="./assets/images/weather_icons/${icon}.png" width="64" height="64" alt="${description}" class="weather-icon">
+                <img src="./assets/images/weather_icons/${icon}.png" width="120" height="120" alt="${description}" class="weather-icon">
             </div>
 
             <p class="body-3">${description}</p>

@@ -53,13 +53,3 @@ window.addEventListener("load", function() {
 });
 
 
-// window.onhashchange = function() {
-//     // Récupérer les nouvelles valeurs de latitude et longitude depuis l'URL
-//     const params = new URLSearchParams(window.location.hash.substring(1));
-//     const lat = params.get("lat");
-//     const lon = params.get("lon");
-
-//     // Mettre à jour l'affichage avec ces nouvelles valeurs
-//     updateWeather(lat, lon); // Appelle la fonction d'affichage de la météo avec les nouvelles coordonnées
-// };
-
